@@ -1,8 +1,8 @@
-FROM fedora:rawhide
+FROM fedora:25
 
 ENV container=docker FLANNELD_ETCD_ENDPOINTS="http://127.0.0.1:2379" FLANNELD_ETCD_PREFIX="/atomic.io/network"
 
-ENV VERSION=0.1 RELEASE=2 ARCH=x86_64
+ENV VERSION=0.1 RELEASE=7 ARCH=x86_64
 LABEL BZComponent="flannel" \
       Name="$FGC/flannel" \
       Version="$VERSION" \

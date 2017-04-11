@@ -1,6 +1,6 @@
-FROM fedora:rawhide
+FROM fedora:25
 
-ENV VERSION=0.1 RELEASE=3 ARCH=x86_64
+ENV VERSION=0.1 RELEASE=9 ARCH=x86_64
 LABEL BZComponent="etcd" \
       Name="$FGC/etcd" \
       Version="$VERSION" \
