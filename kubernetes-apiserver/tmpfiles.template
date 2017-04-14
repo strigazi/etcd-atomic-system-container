@@ -1,0 +1,1 @@
+L /usr/local/bin/kubectl - - - - /var/lib/containers/atomic/${NAME}/rootfs/usr/bin/kubectl
