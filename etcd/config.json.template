@@ -1,67 +1,112 @@
 {
-	"ociVersion": "0.3.0",
+	"ociVersion": "0.5.0",
 	"platform": {
 		"os": "linux",
 		"arch": "amd64"
 	},
 	"process": {
 		"terminal": false,
-		"user": {
-			"uid": 0,
-			"gid": 0
-		},
+		"user": {},
 		"args": [
-			"/usr/bin/etcd-env.sh",
-			"/usr/bin/etcd"
+			            "/usr/bin/etcd-env.sh",
+                        "/usr/bin/etcd"
 		],
 		"env": [
-			"NAME=$NAME",
-			"ETCD_NAME=$ETCD_NAME",
-			"ETCD_ADVERTISE_CLIENT_URLS=$ETCD_ADVERTISE_CLIENT_URLS",
-			"ETCD_LISTEN_CLIENT_URLS=$ETCD_LISTEN_CLIENT_URLS",
-			"ETCD_INITIAL_ADVERTISE_PEER_URLS=$ETCD_INITIAL_ADVERTISE_PEER_URLS",
-			"ETCD_LISTEN_PEER_URLS=$ETCD_LISTEN_PEER_URLS",
-			"ETCD_INITIAL_CLUSTER=$ETCD_INITIAL_CLUSTER",
-			"ETCD_INITIAL_CLUSTER_STATE=$ETCD_INITIAL_CLUSTER_STATE",
-			"ETCD_WAL_DIR=$ETCD_WAL_DIR",
-			"ETCD_SNAPSHOT_COUNT=$ETCD_SNAPSHOT_COUNT",
-			"ETCD_HEARTBEAT_INTERVAL=$ETCD_HEARTBEAT_INTERVAL",
-			"ETCD_ELECTION_TIMEOUT=$ETCD_ELECTION_TIMEOUT",
-			"ETCD_MAX_SNAPSHOTS=$ETCD_MAX_SNAPSHOTS",
-			"ETCD_MAX_WALS=$ETCD_MAX_WALS",
-			"ETCD_CORS=$ETCD_CORS",
-			"ETCD_INITIAL_CLUSTER_TOKEN=$ETCD_INITIAL_CLUSTER_TOKEN",
-			"ETCD_DISCOVERY=$ETCD_DISCOVERY",
-			"ETCD_DISCOVERY_SRV=$ETCD_DISCOVERY_SRV",
-			"ETCD_DISCOVERY_FALLBACK=$ETCD_DISCOVERY_FALLBACK",
-			"ETCD_DISCOVERY_PROXY=$ETCD_DISCOVERY_PROXY",
-			"ETCD_PROXY=$ETCD_PROXY",
-			"ETCD_PROXY_FAILURE_WAIT=$ETCD_PROXY_FAILURE_WAIT",
-			"ETCD_PROXY_REFRESH_INTERVAL=$ETCD_PROXY_REFRESH_INTERVAL",
-			"ETCD_PROXY_DIAL_TIMEOUT=$ETCD_PROXY_DIAL_TIMEOUT",
-			"ETCD_PROXY_WRITE_TIMEOUT=$ETCD_PROXY_WRITE_TIMEOUT",
-			"ETCD_PROXY_READ_TIMEOUT=$ETCD_PROXY_READ_TIMEOUT",
-			"ETCD_CERT_FILE=$ETCD_CERT_FILE",
-			"ETCD_KEY_FILE=$ETCD_KEY_FILE",
-			"ETCD_CLIENT_CERT_AUTH=$ETCD_CLIENT_CERT_AUTH",
-			"ETCD_TRUSTED_CA_FILE=$ETCD_TRUSTED_CA_FILE",
-			"ETCD_PEER_CERT_FILE=$ETCD_PEER_CERT_FILE",
-			"ETCD_PEER_KEY_FILE=$ETCD_PEER_KEY_FILE",
-			"ETCD_PEER_CLIENT_CERT_AUTH=$ETCD_PEER_CLIENT_CERT_AUTH",
-			"ETCD_PEER_TRUSTED_CA_FILE=$ETCD_PEER_TRUSTED_CA_FILE",
-			"ETCD_DEBUG=$ETCD_DEBUG",
-			"ETCD_LOG_PACKAGE_LEVELS=$ETCD_LOG_PACKAGE_LEVELS",
-			"ETCD_STRICT_RECONFIG_CHECK=$ETCD_STRICT_RECONFIG_CHECK",
-			"ETCD_ENABLE_PPROF=$ETCD_ENABLE_PPROF",
-			"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
-			"TERM=xterm"
+                        "NAME=etcd",
+                        "ETCD_NAME=",
+                        "ETCD_ADVERTISE_CLIENT_URLS=",
+                        "ETCD_LISTEN_CLIENT_URLS=",
+                        "ETCD_INITIAL_ADVERTISE_PEER_URLS=",
+                        "ETCD_LISTEN_PEER_URLS=",
+                        "ETCD_INITIAL_CLUSTER=",
+                        "ETCD_INITIAL_CLUSTER_STATE=new",
+                        "ETCD_WAL_DIR=",
+                        "ETCD_SNAPSHOT_COUNT=10000",
+                        "ETCD_HEARTBEAT_INTERVAL=100",
+                        "ETCD_ELECTION_TIMEOUT=1000",
+                        "ETCD_MAX_SNAPSHOTS=5",
+                        "ETCD_MAX_WALS=5",
+                        "ETCD_CORS=",
+                        "ETCD_INITIAL_CLUSTER_TOKEN=etcd-cluster",
+                        "ETCD_DISCOVERY=",
+                        "ETCD_DISCOVERY_SRV=",
+                        "ETCD_DISCOVERY_FALLBACK=proxy",
+                        "ETCD_DISCOVERY_PROXY=",
+                        "ETCD_PROXY=off",
+                        "ETCD_PROXY_FAILURE_WAIT=5000",
+                        "ETCD_PROXY_REFRESH_INTERVAL=30000",
+                        "ETCD_PROXY_DIAL_TIMEOUT=1000",
+                        "ETCD_PROXY_WRITE_TIMEOUT=5000",
+                        "ETCD_PROXY_READ_TIMEOUT=0",
+                        "ETCD_CERT_FILE=",
+                        "ETCD_KEY_FILE=",
+                        "ETCD_CLIENT_CERT_AUTH=false",
+                        "ETCD_TRUSTED_CA_FILE=",
+                        "ETCD_PEER_CERT_FILE=",
+                        "ETCD_PEER_KEY_FILE=",
+                        "ETCD_PEER_CLIENT_CERT_AUTH=false",
+                        "ETCD_PEER_TRUSTED_CA_FILE=",
+                        "ETCD_DEBUG=false",
+                        "ETCD_LOG_PACKAGE_LEVELS=",
+                        "ETCD_STRICT_RECONFIG_CHECK=false",
+                        "ETCD_ENABLE_PPROF=false",
+                        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                        "TERM=xterm"
+                ],
+		"cwd": "/",
+		"capabilities": [
+                        "CAP_CHOWN",
+                        "CAP_DAC_OVERRIDE",
+                        "CAP_DAC_READ_SEARCH",
+                        "CAP_FOWNER",
+                        "CAP_FSETID",
+                        "CAP_KILL",
+                        "CAP_SETGID",
+                        "CAP_SETUID",
+                        "CAP_SETPCAP",
+                        "CAP_LINUX_IMMUTABLE",
+                        "CAP_NET_BIND_SERVICE",
+                        "CAP_NET_BROADCAST",
+                        "CAP_NET_ADMIN",
+                        "CAP_NET_RAW",
+                        "CAP_IPC_LOCK",
+                        "CAP_IPC_OWNER",
+                        "CAP_SYS_MODULE",
+                        "CAP_SYS_RAWIO",
+                        "CAP_SYS_CHROOT",
+                        "CAP_SYS_PTRACE",
+                        "CAP_SYS_PACCT",
+                        "CAP_SYS_ADMIN",
+                        "CAP_SYS_BOOT",
+                        "CAP_SYS_NICE",
+                        "CAP_SYS_RESOURCE",
+                        "CAP_SYS_TIME",
+                        "CAP_SYS_TTY_CONFIG",
+                        "CAP_MKNOD",
+                        "CAP_LEASE",
+                        "CAP_AUDIT_WRITE",
+                        "CAP_AUDIT_CONTROL",
+                        "CAP_SETFCAP",
+                        "CAP_MAC_OVERRIDE",
+                        "CAP_MAC_ADMIN",
+                        "CAP_SYSLOG",
+                        "CAP_WAKE_ALARM",
+                        "CAP_BLOCK_SUSPEND"
 		],
-		"cwd": "/"
+		"rlimits": [
+			{
+				"type": "RLIMIT_NOFILE",
+				"hard": 1024,
+				"soft": 1024
+			}
+		],
+		"noNewPrivileges": false
 	},
 	"root": {
 		"path": "rootfs",
 		"readonly": true
 	},
+	"hostname": "flannel",
 	"mounts": [
 		{
 			"destination": "/proc",
@@ -138,7 +183,7 @@
 		},
 		{
 			"type": "bind",
-			"source": "${STATE_DIRECTORY}/etcd/${NAME}.etcd",
+			"source": "/var/lib/etcd/etcd.etcd",
 			"destination": "/var/lib/etcd",
 			"options": [
 				"rbind",
@@ -148,7 +193,7 @@
 		},
 		{
 			"type": "bind",
-			"source": "${RUN_DIRECTORY}/${NAME}",
+			"source": "/run/etcd",
 			"destination": "/var/run/etcd",
 			"options": [
 				"rbind",
@@ -177,19 +222,8 @@
                         ]
                 }
 	],
+	"hooks": {},
 	"linux": {
-		"capabilities": [
-			"CAP_AUDIT_WRITE",
-			"CAP_KILL",
-			"CAP_NET_BIND_SERVICE"
-		],
-		"rlimits": [
-			{
-				"type": "RLIMIT_NOFILE",
-				"hard": 1024,
-				"soft": 1024
-			}
-		],
 		"resources": {
 			"devices": [
 				{
@@ -200,17 +234,26 @@
 		},
 		"namespaces": [
 			{
-				"type": "pid"
+				"type": "ipc"
 			},
 			{
-				"type": "ipc"
+				"type": "uts"
 			},
 			{
 				"type": "mount"
 			}
 		],
-		"devices": null,
-		"apparmorProfile": "",
-		"selinuxProcessLabel": ""
+		"maskedPaths": [
+			"/proc/kcore",
+			"/proc/latency_stats",
+			"/proc/timer_stats",
+			"/proc/sched_debug"
+		],
+		"readonlyPaths": [
+			"/proc/asound",
+			"/proc/bus",
+			"/proc/irq",
+			"/proc/sysrq-trigger"
+		]
 	}
 }

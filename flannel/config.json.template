@@ -182,6 +182,16 @@
                                 "rbind",
                                 "rprivate"
                         ]
+                 },
+                 {
+                        "destination": "/etc/flanneld",
+                        "type": "bind",
+                        "source": "/etc/flanneld",
+                        "options": [
+                                "ro",
+                                "rbind",
+                                "rprivate"
+                        ]
                  }
 	],
 	"hooks": {},

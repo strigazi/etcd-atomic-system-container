@@ -9,7 +9,7 @@ source /etc/sysconfig/flanneld
 # Ensure this file doesn't already exist.
 rm -f run/flannel/subnet.env
 
-/usr/bin/flanneld -etcd-endpoints=${FLANNEL_ETCD_ENDPOINTS} -etcd-prefix=${FLANNEL_ETCD_PREFIX} $FLANNEL_OPTIONS &
+/usr/bin/flanneld -etcd-endpoints=${FLANNEL_ETCD_ENDPOINTS} -etcd-prefix=${FLANNEL_ETCD_PREFIX} -etcd-cafile=${FLANNEL_ETCD_CAFILE} -etcd-certfile=${FLANNEL_ETCD_CERTFILE} -etcd-keyfile=${FLANNEL_ETCD_KEYFILE} $FLANNEL_OPTIONS &
 child=$!
 
 while test \! -e /run/flannel/subnet.env
